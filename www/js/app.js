@@ -12,7 +12,7 @@ angular.module('todoapp', ['ionic', 'ngCordova'])
   var dbSize = 5 * 1024 * 1024; // 5MB
   /// open database
   var db = openDatabase("Todo", "1", "Todo manager", dbSize);
-  // create table for todos
+  // create table for cordotodos
   db.transaction(function (tx) {
       tx.executeSql("CREATE TABLE IF NOT EXISTS " +
           "todo(ID TEXT PRIMARY KEY, todo TEXT, added_on DATETIME, finished_on DATETIME)", [],
